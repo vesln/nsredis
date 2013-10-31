@@ -24,6 +24,5 @@
     "coveralls": "~2.3.0",
     "jscoverage": "~0.3.8",
     "mocha-lcov-reporter": "0.0.1"
-  },
-  "dependencies": {}
+  }
 }
