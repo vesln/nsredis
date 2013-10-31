@@ -6,6 +6,8 @@
 
 ## Description
 
+### Getting started
+
 ### Manual key management
 
 ### Access to the client
