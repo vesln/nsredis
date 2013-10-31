@@ -27,10 +27,16 @@ $ make test
 $ make test-cov
 ```
 
-### JSlint
+### JSHint
 
 ```bash
 $ make jshint
+```
+
+### Tests + JSHint
+
+```bash
+$ make check
 ```
 
 ## Contributors
