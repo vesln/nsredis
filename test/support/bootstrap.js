@@ -9,6 +9,7 @@ var chai = require('chai');
  */
 
 var nsredis = require('../..');
+var FakeClient = require('../doubles/fake-client');
 
 /**
  * Register `should`.
@@ -26,4 +27,4 @@ chai.Assertion.includeStack = true;
  * Create a global instance for DRY tests.
  */
 
-global.nsr = nsredis(null, 'test');
+global.nsr = nsredis(new FakeClient, 'test');
