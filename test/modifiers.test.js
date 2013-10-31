@@ -45,4 +45,17 @@ describe('modifiers', function() {
       ]);
     });
   });
+
+  describe('#alternate', function() {
+    it('prepends a namespace to every other item', function() {
+      nsr.mset('key1', 'val', 'key2', 'val', noop);
+      nsr.client().lastCall().args.should.eql([
+        'test:key1',
+        'val',
+        'test:key2',
+        'val',
+        noop
+      ]);
+    });
+  });
 });
