@@ -2,7 +2,7 @@
  * Array#slice.
  */
 
-var slice = [].slice;
+var slice = Array.prototype.slice;
 
 /**
  * Fake client.
@@ -20,8 +20,8 @@ function FakeClient() {
  * @api public
  */
 
-FakeClient.prototype.send_command = function() {
-  this.calls.push(slice.call(arguments));
+FakeClient.prototype.send_command = function(command, args) {
+  this.calls.push({ command: command, args: args });
 };
 
 /**
