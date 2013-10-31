@@ -5,14 +5,14 @@ describe('modifiers', function() {
     nsr.client().resetCalls();
   });
 
-  describe('#first', function() {
+  describe('modify first', function() {
     it('prepends a namespace to the first argument', function() {
       nsr.set('user', 3);
       nsr.client().lastCall().args.should.eql(['test:user', 3]);
     });
   });
 
-  describe('#all', function() {
+  describe('modify all', function() {
     it('prepends a namespace to all arguments except non-strings', function() {
       nsr.rename('user', 'person', noop);
       nsr.client().lastCall().args.should.eql([
@@ -23,7 +23,7 @@ describe('modifiers', function() {
     });
   });
 
-  describe('#excludeFirst', function() {
+  describe('exclude first', function() {
     it('prepends a namespace to all arguments except the first one and non-strings', function() {
       nsr.object('refcount', 'people', noop);
       nsr.client().lastCall().args.should.eql([
@@ -34,7 +34,7 @@ describe('modifiers', function() {
     });
   });
 
-  describe('#excludeLast', function() {
+  describe('exclude last', function() {
     it('prepends a namespace to all arguments except the last one and non-strings', function() {
       nsr.smove('first', 'second', 'foo', noop);
       nsr.client().lastCall().args.should.eql([
@@ -46,7 +46,7 @@ describe('modifiers', function() {
     });
   });
 
-  describe('#alternate', function() {
+  describe('alternate', function() {
     it('prepends a namespace to every other item', function() {
       nsr.mset('key1', 'val', 'key2', 'val', noop);
       nsr.client().lastCall().args.should.eql([
