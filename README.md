@@ -43,6 +43,10 @@ $ make check
 
 ## Credits
 
+Special thanks to:
+
+  - [Radoslav Stankov](https://github.com/rstankov)
+
 ## Support the author
 
 Do you like this project? Star the repository, spread the word - it really helps. You may want to follow
