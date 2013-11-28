@@ -2,14 +2,16 @@
   "name": "nsredis",
   "version": "0.0.0",
   "description": "Namespaces for Redis",
-  "keywords": [],
   "main": "index.js",
   "homepage": "https://github.com/vesln/nsredis",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "make test"
+    "test": "mocha test/*.test.js",
+    "pretest": "jshint .",
+    "coverage": "istanbul cover ./node_modules/.bin/_mocha test/*.test.js",
+    "coveralls": "istanbul cover ./node_modules/.bin/_mocha test/*.test.js --report lcovonly && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +24,6 @@
     "chai": "~1.8.1",
     "jshint": "~2.3.0",
     "coveralls": "~2.3.0",
-    "jscoverage": "~0.3.8",
-    "mocha-lcov-reporter": "0.0.1"
+    "istanbul": "~0.1.44"
   }
 }
