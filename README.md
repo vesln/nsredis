@@ -17,29 +17,14 @@
 ### Running the tests
 
 ```bash
-$ npm install
-$ make test
+$ npm test
 ```
 
 ### Test coverage
 
 ```bash
-$ make test-cov
+$ npm run-script coverage
 ```
-
-### JSHint
-
-```bash
-$ make jshint
-```
-
-### Tests + JSHint
-
-```bash
-$ make check
-```
-
-## Contributors
 
 ## Credits
 
